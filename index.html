@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banco Digital · Educación financiera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Banco Digital, inicio">
+        <span class="brand-mark" aria-hidden="true">BD</span>
+        <span class="brand-name">Banco Digital</span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#educacion">Educación financiera</a>
+        <a href="#ayuda">Ayuda</a>
+      </nav>
+      <button class="btn btn-outline" type="button" title="Demostración: no hay acceso a cuentas">Ingresar</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Tu banco digital,<br>más fácil de entender.</h1>
+          <p>Consulta información sobre conceptos financieros de manera sencilla y conversacional.</p>
+          <a class="btn btn-light" href="#productos">Explorar conceptos</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+          <span class="bar bar-4"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="container">
+        <h2>Conceptos que puedes explorar</h2>
+        <p class="section-lead">Información básica para entender cómo funcionan los productos financieros.</p>
+        <div class="card-grid">
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg>
+            <h3>Créditos</h3>
+            <p>Dinero que una entidad te presta para que lo pagues después.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10l8-5 8 5M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>
+            <h3>Préstamos</h3>
+            <p>Una suma que recibes hoy y devuelves en un plazo acordado.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19L19 5"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg>
+            <h3>Tasas de interés</h3>
+            <p>El costo de usar dinero ajeno, expresado como porcentaje.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>
+            <h3>Cuotas</h3>
+            <p>Los pagos periódicos con los que vas saldando una deuda.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="educacion">
+      <div class="container">
+        <h2>Aprende conversando</h2>
+        <p class="section-lead">El asistente adapta cada explicación a lo que necesitas.</p>
+        <ul class="feature-list">
+          <li><strong>Explicaciones sencillas</strong> con ejemplos de la vida diaria.</li>
+          <li><strong>Comparaciones</strong> entre conceptos que suelen confundirse.</li>
+          <li><strong>Otra forma de explicarlo</strong> cuando algo no queda claro.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="ayuda">
+      <div class="container help-box">
+        <div>
+          <h2>¿Tienes una duda?</h2>
+          <p>Pregunta al asistente financiero, en la esquina inferior izquierda.</p>
+        </div>
+        <button class="btn btn-primary" type="button" data-open-chat>Abrir asistente</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Banco Digital es un banco ficticio creado con fines académicos. No ofrece productos ni servicios reales.</p>
+    </div>
+  </footer>
+
+  <!-- Asistente conversacional -->
+  <div class="assistant">
+    <section class="chat-panel" id="chat-panel" aria-label="Asistente financiero" hidden>
+      <header class="chat-header">
+        <div class="chat-title">
+          <strong>Asistente financiero</strong>
+          <span>Orientación sobre conceptos financieros</span>
+        </div>
+        <button class="chat-minimize" id="chat-minimize" type="button" aria-label="Minimizar asistente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg>
+        </button>
+      </header>
+
+      <div class="chat-messages" id="chat-messages" aria-live="polite">
+        <div class="message message-assistant">Hola 👋 Soy el asistente financiero de Banco Digital. Puedes preguntarme sobre tasas de interés, créditos, préstamos, cuotas y otros conceptos financieros.</div>
+      </div>
+
+      <form class="chat-form" id="chat-form" autocomplete="off">
+        <div class="chat-input-row">
+          <input id="chat-input" type="text" placeholder="Escribe tu pregunta..." maxlength="500" aria-label="Escribe tu pregunta">
+          <button id="chat-send" class="chat-send" type="submit" aria-label="Enviar pregunta">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7-7-1z"/></svg>
+          </button>
+        </div>
+        <p class="chat-notice">No escribas contraseñas, números de cuenta, datos de tarjetas ni otra información personal.</p>
+      </form>
+    </section>
+
+    <button class="chat-tab" id="chat-toggle" type="button" aria-expanded="false" aria-controls="chat-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+      <span>Asistente financiero</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
